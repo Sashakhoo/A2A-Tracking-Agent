@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Risk Command Centre | Codencode AI Tracking Agent</title>
+  <meta name="description" content="Interactive prototype of the Codencode manufacturing risk command centre.">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <style>
+    :root{--bg:#070a0a;--panel:#0e1313;--panel2:#121918;--line:#26312f;--text:#eff5f3;--muted:#84908d;--lime:#b9ff66;--teal:#35d9c8;--red:#ff6066;--amber:#ffad42}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 Manrope,system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.mono{font-family:"DM Mono",monospace}.app{min-height:100vh;display:grid;grid-template-columns:230px 1fr}.sidebar{border-right:1px solid var(--line);background:#090d0d;padding:22px 16px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}.brand{display:flex;gap:11px;align-items:center;font-weight:800;margin:0 6px 34px}.mark{width:34px;height:34px;border:1px solid var(--line);border-radius:9px;display:grid;place-items:center}.mark i{width:16px;height:12px;border-top:2px solid var(--lime);border-bottom:2px solid var(--teal);position:relative}.mark i:after{content:"";position:absolute;width:11px;border-top:2px solid #fff;top:4px}.nav{display:grid;gap:6px}.nav button,.back{border:0;color:#8d9996;background:transparent;text-align:left;padding:11px 12px;border-radius:7px;display:flex;align-items:center;gap:11px}.nav button.active{background:#16201d;color:#fff}.nav button.active:before{content:"";width:4px;height:17px;border-radius:9px;background:var(--lime)}.nav button:not(.active):before{content:"";width:4px}.sidebottom{margin-top:auto}.status{border:1px solid var(--line);background:#0e1513;border-radius:8px;padding:12px;margin-bottom:12px;color:var(--muted);font-size:12px}.status b{display:block;color:#d7e0dd;margin-bottom:5px}.dot{display:inline-block;width:7px;height:7px;background:var(--lime);border-radius:50%;margin-right:6px}.back{text-decoration:none;border:1px solid var(--line);justify-content:center}.main{min-width:0}.topbar{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;background:rgba(7,10,10,.92);backdrop-filter:blur(12px);z-index:5}.topbar h1{font-size:18px;margin:0}.topbar small{display:block;color:var(--muted);font-weight:400;margin-top:2px}.top-actions{display:flex;gap:10px;align-items:center}.sync{border:1px solid var(--line);background:#111817;color:#c8d1cf;padding:9px 12px;border-radius:7px}.avatar{width:35px;height:35px;border-radius:50%;background:var(--lime);color:#14200c;display:grid;place-items:center;font-weight:800}.content{padding:25px 28px 50px;max-width:1500px;margin:auto}.notice{background:linear-gradient(90deg,rgba(53,217,200,.08),transparent);border:1px solid #21433e;border-radius:8px;padding:11px 14px;color:#9db5af;margin-bottom:18px;display:flex;justify-content:space-between}.notice b{color:var(--teal)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:17px}.metric label{font:11px "DM Mono";color:#75817e;text-transform:uppercase;letter-spacing:.08em}.metric strong{display:block;font-size:27px;margin:8px 0 3px}.metric small{color:#71807c}.up{color:var(--red)!important}.down{color:var(--lime)!important}.grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(310px,.75fr);gap:14px;margin-top:14px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:9px;overflow:hidden}.panelhead{padding:16px 17px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.panelhead h2{font-size:14px;margin:0}.filters{display:flex;gap:7px}.filters button{border:1px solid var(--line);background:#101716;color:#7e8a87;border-radius:6px;padding:6px 9px;font-size:11px}.filters button.active{background:#23312d;color:var(--lime);border-color:#395148}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th{text-align:left;color:#687571;font:10px "DM Mono";letter-spacing:.06em;text-transform:uppercase;padding:11px 14px;background:#0b1010}td{padding:14px;border-top:1px solid #1d2725;color:#aeb9b6;font-size:12px}tr.riskrow{cursor:pointer;transition:.15s}tr.riskrow:hover,tr.riskrow.selected{background:#141d1b}td b{color:#e8eeec}.pill{padding:4px 7px;border-radius:99px;font:10px "DM Mono";display:inline-flex;align-items:center;gap:5px}.critical{background:rgba(255,96,102,.12);color:#ff7c81}.high{background:rgba(255,173,66,.12);color:#ffc36d}.medium{background:rgba(53,217,200,.1);color:var(--teal)}.owner{display:flex;align-items:center;gap:7px}.miniav{width:22px;height:22px;border-radius:50%;background:#24312e;display:grid;place-items:center;color:#bdcac6;font-size:9px}.detail{padding:18px}.riskcode{color:var(--teal);font-size:10px}.detail h3{font-size:18px;margin:8px 0 4px}.detail .sub{color:var(--muted);font-size:12px;margin-bottom:18px}.impact{border:1px solid #3b2d2d;background:rgba(255,96,102,.05);border-radius:8px;padding:13px;margin-bottom:14px}.impact label,.block label{font:10px "DM Mono";color:#73817d;text-transform:uppercase}.impact strong{display:block;color:#ff8a8f;margin-top:5px}.block{border-top:1px solid var(--line);padding:14px 0}.block p{margin:5px 0 0;color:#c2ccca;font-size:12px}.recommend{background:#111d19;border:1px solid #2a463e;border-radius:8px;padding:13px;color:#cbd8d4}.recommend b{color:var(--lime);font-size:11px}.detail-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px}.primary,.secondary{border-radius:7px;padding:10px;border:1px solid var(--line);font-weight:700;font-size:12px}.primary{background:var(--lime);color:#10160c;border-color:var(--lime)}.secondary{background:#121918;color:#c9d3d0}.chartgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.chart{padding:18px}.bars{height:155px;display:flex;align-items:end;gap:14px;padding:20px 8px 0}.barcol{flex:1;text-align:center;color:#6f7c78;font-size:9px}.bar{background:linear-gradient(var(--teal),#1f5149);border-radius:5px 5px 0 0;margin-bottom:7px;min-height:4px}.donutrow{display:flex;align-items:center;gap:28px;padding:22px}.donut{width:128px;height:128px;border-radius:50%;background:conic-gradient(var(--red) 0 25%,var(--amber) 25% 58%,var(--teal) 58% 83%,#31413e 83%);position:relative}.donut:after{content:"12";position:absolute;inset:22px;background:var(--panel);border-radius:50%;display:grid;place-items:center;font-size:25px;font-weight:800}.legend{display:grid;gap:9px;color:#94a19d;font-size:11px}.legend i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px}.toast{position:fixed;right:24px;bottom:24px;padding:12px 15px;background:#eafbd8;color:#17210e;border-radius:8px;font-weight:700;box-shadow:0 15px 40px #0008;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:none}
+    @media(max-width:1050px){.app{grid-template-columns:76px 1fr}.sidebar{padding:20px 10px}.brand span,.nav button span,.sidebottom{display:none}.brand{justify-content:center;margin-left:0;margin-right:0}.nav button{justify-content:center}.nav button:before{display:none}.grid{grid-template-columns:1fr}.chartgrid{grid-template-columns:1fr}}
+    @media(max-width:700px){.app{display:block}.sidebar{display:none}.topbar{padding:0 14px}.content{padding:14px}.metrics{grid-template-columns:1fr 1fr}.topbar small,.sync span{display:none}.notice{font-size:11px}.chartgrid{grid-template-columns:1fr}.donutrow{gap:15px}.metric strong{font-size:22px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="mark"><i></i></span><span>Codencode<br><small style="color:#74817d;font-weight:500">Risk Agent</small></span></div>
+    <div class="nav">
+      <button class="active"><span>Command centre</span></button>
+      <button><span>Risk register</span></button>
+      <button><span>Production orders</span></button>
+      <button><span>Suppliers</span></button>
+      <button><span>Agent activity</span></button>
+      <button><span>Settings</span></button>
+    </div>
+    <div class="sidebottom">
+      <div class="status"><b><span class="dot"></span>3 systems connected</b>ERP · PTS · Excel<br>Last sync 09:42</div>
+      <a class="back" href="/">← Product website</a>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><h1>Risk Command Centre</h1><small>Tuesday, 15 September 2026 · Live pilot environment</small></div><div class="top-actions"><button class="sync" id="syncBtn">↻ <span>Sync data</span></button><div class="avatar">SK</div></div></header>
+    <div class="content">
+      <div class="notice"><span><b>Agent insight:</b> Three risks require action before today's purchasing cut-off.</span><span class="mono">09:42 MYT</span></div>
+      <section class="metrics">
+        <div class="metric"><label>Open risks</label><strong id="openCount">12</strong><small class="up">↑ 3 since yesterday</small></div>
+        <div class="metric"><label>Critical</label><strong style="color:var(--red)">3</strong><small>Immediate intervention</small></div>
+        <div class="metric"><label>Projected shortage</label><strong>284</strong><small>Units across 6 items</small></div>
+        <div class="metric"><label>Advance warning</label><strong>8.4d</strong><small class="down">↑ 2.1 days earlier</small></div>
+      </section>
+      <div class="grid">
+        <section class="panel">
+          <div class="panelhead"><h2>Priority risk register</h2><div class="filters"><button class="active" data-filter="all">All 12</button><button data-filter="critical">Critical 3</button><button data-filter="high">High 4</button></div></div>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Severity</th><th>Risk / Reference</th><th>Impact</th><th>Need date</th><th>Owner</th><th>Status</th></tr></thead>
+            <tbody id="riskBody">
+              <tr class="riskrow selected" data-level="critical" data-id="R-001"><td><span class="pill critical">● Critical</span></td><td><b>PCB Assembly</b><br><span class="mono">PO-2841 · ITM-0448</span></td><td>Line 02 stoppage</td><td>18 Sep</td><td><span class="owner"><i class="miniav">AL</i>Alicia · Purchasing</span></td><td>Open</td></tr>
+              <tr class="riskrow" data-level="critical" data-id="R-002"><td><span class="pill critical">● Critical</span></td><td><b>Control Module</b><br><span class="mono">MO-1186 · ITM-0922</span></td><td>42 pcs short</td><td>17 Sep</td><td><span class="owner"><i class="miniav">JT</i>Jason · Planning</span></td><td>Open</td></tr>
+              <tr class="riskrow" data-level="critical" data-id="R-003"><td><span class="pill critical">● Critical</span></td><td><b>Power Relay</b><br><span class="mono">PO-2817 · ITM-0314</span></td><td>Project PM2260006</td><td>19 Sep</td><td><span class="owner"><i class="miniav">—</i>Unassigned</span></td><td>Escalated</td></tr>
+              <tr class="riskrow" data-level="high" data-id="R-004"><td><span class="pill high">● High</span></td><td><b>Housing Bracket</b><br><span class="mono">PO-2798 · ITM-0655</span></td><td>ETA exceeds milestone</td><td>22 Sep</td><td><span class="owner"><i class="miniav">CY</i>Chloe · Project</span></td><td>Acknowledged</td></tr>
+              <tr class="riskrow" data-level="high" data-id="R-005"><td><span class="pill high">● High</span></td><td><b>Cable Harness</b><br><span class="mono">MO-1191 · ITM-0771</span></td><td>86 pcs short</td><td>23 Sep</td><td><span class="owner"><i class="miniav">SK</i>Store Team</span></td><td>Open</td></tr>
+              <tr class="riskrow" data-level="medium" data-id="R-006"><td><span class="pill medium">● Medium</span></td><td><b>Terminal Block</b><br><span class="mono">PO-2860 · ITM-0209</span></td><td>Unconfirmed ETA</td><td>28 Sep</td><td><span class="owner"><i class="miniav">AL</i>Alicia · Purchasing</span></td><td>Monitoring</td></tr>
+            </tbody>
+          </table></div>
+        </section>
+        <aside class="panel">
+          <div class="panelhead"><h2>Risk intelligence</h2><span class="mono" style="color:#687571;font-size:10px" id="riskId">R-001</span></div>
+          <div class="detail">
+            <span class="riskcode mono" id="detailRef">PO-2841 · ITM-0448</span><h3 id="detailTitle">PCB Assembly delivery late</h3><div class="sub" id="detailSub">Detected 15 Sep 2026 at 09:31</div>
+            <div class="impact"><label>Predicted operational impact</label><strong id="detailImpact">Line 02 may stop for 2.5 days</strong></div>
+            <div class="block"><label>Why this was flagged</label><p id="detailWhy">Supplier ETA is 25 Sep, seven days after the production need date. Available and incoming stock cannot cover MO-1186.</p></div>
+            <div class="block"><label>Accountable owner</label><p id="detailOwner">Alicia Lim · Purchasing</p></div>
+            <div class="recommend"><b>RECOMMENDED NEXT ACTION</b><p id="detailAction">Request a revised supplier ETA and evaluate 120 units from alternate stock allocation.</p></div>
+            <div class="detail-actions"><button class="primary" id="ackBtn">Acknowledge</button><button class="secondary" id="assignBtn">Assign owner</button></div>
+          </div>
+        </aside>
+      </div>
+      <div class="chartgrid">
+        <section class="panel"><div class="panelhead"><h2>Risks detected by day</h2><span class="mono" style="color:#687571;font-size:10px">LAST 7 DAYS</span></div><div class="chart"><div class="bars"><div class="barcol"><div class="bar" style="height:35%"></div>WED</div><div class="barcol"><div class="bar" style="height:52%"></div>THU</div><div class="barcol"><div class="bar" style="height:41%"></div>FRI</div><div class="barcol"><div class="bar" style="height:28%"></div>SAT</div><div class="barcol"><div class="bar" style="height:18%"></div>SUN</div><div class="barcol"><div class="bar" style="height:63%"></div>MON</div><div class="barcol"><div class="bar" style="height:88%;background:linear-gradient(var(--lime),#48722c)"></div>TODAY</div></div></div></section>
+        <section class="panel"><div class="panelhead"><h2>Risk composition</h2><span class="mono" style="color:#687571;font-size:10px">OPEN ITEMS</span></div><div class="donutrow"><div class="donut"></div><div class="legend"><span><i style="background:var(--red)"></i>3 Critical</span><span><i style="background:var(--amber)"></i>4 High</span><span><i style="background:var(--teal)"></i>3 Medium</span><span><i style="background:#31413e"></i>2 Low</span></div></div></section>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="toast" id="toast">Risk acknowledged successfully</div>
+<script>
+  const details={
+    "R-001":["PO-2841 · ITM-0448","PCB Assembly delivery late","Line 02 may stop for 2.5 days","Supplier ETA is 25 Sep, seven days after the production need date. Available and incoming stock cannot cover MO-1186.","Alicia Lim · Purchasing","Request a revised supplier ETA and evaluate 120 units from alternate stock allocation."],
+    "R-002":["MO-1186 · ITM-0922","Control Module shortage","42 units required before production release","Available stock is 180 units against 222 committed units. No confirmed receipt exists before the need date.","Jason Tan · Production Planning","Review allocation priority and expedite 42 units from the approved supplier."],
+    "R-003":["PO-2817 · ITM-0314","Power Relay ownership gap","Project PM2260006 milestone at risk","Supplier confirmation is overdue and no accountable owner is assigned to the follow-up action.","Unassigned · Escalation required","Assign Purchasing ownership and request supplier confirmation before today's cut-off."],
+    "R-004":["PO-2798 · ITM-0655","Housing Bracket milestone risk","Installation milestone may move by 3 days","Latest supplier ETA exceeds the project milestone, but recovery time remains available.","Chloe Yap · Project","Confirm partial delivery and update the installation sequence."],
+    "R-005":["MO-1191 · ITM-0771","Cable Harness shortage","86 units short for planned build","Reserved stock and confirmed incoming supply do not cover the planned manufacturing quantity.","Store Team","Validate physical stock and propose allocation from the lower-priority order."],
+    "R-006":["PO-2860 · ITM-0209","Terminal Block ETA unconfirmed","Potential shortage within 13 days","Purchase order is open but the supplier has not confirmed a delivery date.","Alicia Lim · Purchasing","Send an ETA confirmation request and monitor for 24 hours."]
+  };
+  const rows=[...document.querySelectorAll(".riskrow")],toast=document.getElementById("toast");
+  rows.forEach(row=>row.addEventListener("click",()=>{rows.forEach(r=>r.classList.remove("selected"));row.classList.add("selected");const d=details[row.dataset.id];document.getElementById("riskId").textContent=row.dataset.id;["detailRef","detailTitle","detailImpact","detailWhy","detailOwner","detailAction"].forEach((id,i)=>document.getElementById(id).textContent=d[i])}));
+  document.querySelectorAll("[data-filter]").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll("[data-filter]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");rows.forEach(r=>r.style.display=btn.dataset.filter==="all"||r.dataset.level===btn.dataset.filter?"":"none")}));
+  function showToast(msg){toast.textContent=msg;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2200)}
+  document.getElementById("ackBtn").onclick=()=>showToast("Risk acknowledged successfully");
+  document.getElementById("assignBtn").onclick=()=>showToast("Owner assignment opened");
+  document.getElementById("syncBtn").onclick=function(){this.textContent="↻ Syncing…";setTimeout(()=>{this.innerHTML="✓ <span>Data synced</span>";showToast("ERP, PTS and Excel are up to date")},900)};
+</script>
+</body>
+</html>

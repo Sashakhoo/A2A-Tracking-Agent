@@ -3,12 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Codencode AI Tracking Agent | See Risk Before It Becomes Delay</title>
-  <meta name="description" content="A lightweight early-warning and risk coordination layer for ERP, PTS and Excel workflows.">
+  <title>AI Supply Chain Risk Tracking for ERP, PTS & Excel | Codencode</title>
+  <meta name="description" content="Codencode AI Tracking Agent flags material shortages, late deliveries and ownership gaps across ERP, project tracking systems and Excel—without replacing existing software.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="Codencode">
+  <meta name="theme-color" content="#080b0b">
+  <link rel="canonical" href="https://agent.codencode.my/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Codencode AI Tracking Agent">
+  <meta property="og:title" content="AI Supply Chain Risk Tracking | Codencode">
+  <meta property="og:description" content="Detect shortages, late deliveries and ownership gaps before they disrupt production or projects.">
+  <meta property="og:url" content="https://agent.codencode.my/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Supply Chain Risk Tracking | Codencode">
+  <meta name="twitter:description" content="A lightweight risk intelligence layer for ERP, PTS and Excel workflows.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://agent.codencode.my/#organization","name":"Codencode","url":"https://agent.codencode.my/","email":"hello@codencode.my","areaServed":["Malaysia","Singapore"]},
+    {"@type":"SoftwareApplication","@id":"https://agent.codencode.my/#software","name":"Codencode AI Tracking Agent","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://agent.codencode.my/","description":"An AI-powered risk intelligence layer that connects to ERP, project tracking systems and Excel to identify material shortages, late deliveries and ownership gaps.","featureList":["Material shortage detection","Late delivery alerts","Ownership gap detection","ERP, PTS and Excel integration","Risk prioritisation and recommended actions","Auditable human-governed decisions"],"provider":{"@id":"https://agent.codencode.my/#organization"},"audience":{"@type":"BusinessAudience","audienceType":"Manufacturers, interior design firms and construction companies"}},
+    {"@type":"FAQPage","@id":"https://agent.codencode.my/#faq","mainEntity":[
+      {"@type":"Question","name":"What is Codencode AI Tracking Agent?","acceptedAnswer":{"@type":"Answer","text":"Codencode AI Tracking Agent is a lightweight risk intelligence layer that connects to existing ERP, project tracking and Excel workflows to flag shortages, late deliveries and ownership gaps before they cause delays."}},
+      {"@type":"Question","name":"Does Codencode replace an ERP system?","acceptedAnswer":{"@type":"Answer","text":"No. Codencode works as an add-on intelligence layer over the systems a company already uses, allowing teams to improve visibility without a large ERP replacement project."}},
+      {"@type":"Question","name":"What supply chain risks can the agent detect?","acceptedAnswer":{"@type":"Answer","text":"The agent can identify projected material shortages, supplier delivery dates that miss production or project milestones, unconfirmed commitments, overdue actions and items with no accountable owner."}},
+      {"@type":"Question","name":"Who is Codencode AI Tracking Agent for?","acceptedAnswer":{"@type":"Answer","text":"The initial focus is manufacturing, followed by interior design and small-to-mid construction firms that manage fragmented production, purchasing, inventory and project tracking data."}},
+      {"@type":"Question","name":"What does A2A mean in the Codencode roadmap?","acceptedAnswer":{"@type":"Answer","text":"Agent-to-Agent, or A2A, means authorised tracking agents across companies, suppliers and software systems can exchange risk status and coordinate approved resolution steps with human oversight and audit trails."}}
+    ]}
+  ]}
+  </script>
   <style>
     :root{--ink:#080b0b;--panel:#101515;--panel2:#151c1b;--line:#283231;--muted:#94a09e;--text:#f4f8f7;--lime:#b9ff66;--teal:#35d9c8;--orange:#ff8c5a;--red:#ff5d62;--max:1180px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--text);font:16px/1.55 Manrope,system-ui,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
@@ -21,11 +46,12 @@
     .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}.step{padding:28px 25px;min-height:220px;border-right:1px solid var(--line);position:relative;background:#0d1111}.step:last-child{border:0}.step:after{content:"→";position:absolute;right:-10px;top:30px;color:var(--lime);z-index:2;background:var(--ink);padding:0 3px}.step:last-child:after{display:none}.step .mono{font-size:.68rem;color:var(--teal)}.step h3{margin:54px 0 10px;font-size:1.05rem}.step p{color:#899491;font-size:.83rem;margin:0}
     .network-shell{border:1px solid #24403b;border-radius:14px;background:linear-gradient(180deg,#0a0f0e,#080c0c);padding:22px;overflow:hidden;box-shadow:inset 0 1px rgba(255,255,255,.025)}.network-label{display:flex;justify-content:space-between;align-items:center;color:#57706a;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin:0 4px 14px}.network-label span:last-child{color:var(--teal)}.network-svg{display:block;width:100%;height:auto;min-height:430px}.net-line{fill:none;stroke:#1e4c45;stroke-width:1.6}.net-line.live{stroke:#2b7e70;stroke-dasharray:7 10;animation:signal 2.2s linear infinite}.net-line.cross{stroke:#315b54;stroke-dasharray:4 8}.node-box{fill:#0d1514;stroke:#28534b;stroke-width:1.5}.node-agent{fill:#0d3e36;stroke:#16d5b4;stroke-width:2}.node-company{fill:#101817;stroke:#37544f;stroke-width:1.4}.node-text{fill:#d6e2df;font:600 13px "DM Mono",monospace}.node-sub{fill:#78918b;font:10px "DM Mono",monospace}.signal-dot{fill:var(--lime);filter:drop-shadow(0 0 6px rgba(185,255,102,.8))}.signal-dot.alt{fill:var(--teal)}.agent-ring{fill:none;stroke:#16d5b4;stroke-width:1;opacity:.35;transform-box:fill-box;transform-origin:center;animation:ring 2.5s ease-out infinite}.risk-flag{fill:#ffad42;filter:drop-shadow(0 0 5px rgba(255,173,66,.7));animation:blink 1.8s ease-in-out infinite}.network-legend{border-top:1px solid #18312d;display:flex;gap:28px;flex-wrap:wrap;padding:17px 5px 0;color:#627b75;font:11px "DM Mono"}.legend-item{display:flex;align-items:center;gap:8px}.legend-item i{width:22px;border-top:2px solid #2b7e70}.legend-item i.dash{border-top-style:dashed}.legend-item i.dot{width:7px;height:7px;border:0;border-radius:50%;background:var(--lime)}@keyframes signal{to{stroke-dashoffset:-34}}@keyframes ring{0%{transform:scale(.75);opacity:.55}80%,100%{transform:scale(1.32);opacity:0}}@keyframes blink{50%{opacity:.35}}
     .roadmap{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}.roadcopy{position:sticky;top:40px;align-self:start}.roadcopy p{color:#929e9a}.timeline{border-left:1px solid #34403d}.phase{padding:5px 0 48px 37px;position:relative}.phase:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--ink);border:2px solid #5b6864;left:-7px;top:9px}.phase.active:before{background:var(--lime);border-color:var(--lime);box-shadow:0 0 0 6px rgba(185,255,102,.08)}.phase small{font:500 .7rem "DM Mono";color:var(--teal);text-transform:uppercase}.phase h3{font-size:1.25rem;margin:8px 0}.phase p{color:#8c9894;font-size:.9rem;margin:0}.phase.active{background:linear-gradient(90deg,rgba(185,255,102,.05),transparent);border-radius:0 8px 8px 0}
+    .faq-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.faq-item{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:24px}.faq-item h3{font-size:1.02rem;margin:0 0 9px;color:#edf5f2}.faq-item p{margin:0;color:#96a29f;font-size:.9rem}.faq-item:first-child{grid-column:1/-1;background:linear-gradient(110deg,#121b18,#0f1414)}
     .pilot{background:var(--lime);color:#0b1008;border-radius:14px;padding:60px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;position:relative;overflow:hidden}.pilot:after{content:"A2A";position:absolute;right:-12px;bottom:-54px;font-weight:800;font-size:10rem;line-height:1;color:rgba(10,15,8,.07);letter-spacing:-.08em}.pilot .eyebrow{color:#324621}.pilot h2{font-size:clamp(2.3rem,4.5vw,4.2rem);max-width:750px;margin-bottom:0}.pilot p{color:#34412d;position:relative;z-index:1}.pilot .btn{background:#0c1109;color:#fff;border-color:#0c1109;position:relative;z-index:1;margin-top:10px}
     footer{padding:42px 0}.foot{display:flex;justify-content:space-between;align-items:center;color:#76817f;font-size:.75rem}.foot .brand{color:#dfe7e5;font-size:.9rem}
     .whatsapp-cta{position:fixed;right:28px;bottom:28px;z-index:20;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;box-shadow:0 12px 34px rgba(0,0,0,.42),0 0 30px rgba(37,211,102,.2);transition:transform .2s ease,box-shadow .2s ease;animation:wa-blink 2.1s ease-in-out infinite}.whatsapp-cta:before,.whatsapp-cta:after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid rgba(37,211,102,.55);z-index:-1;animation:wa-wave 2.1s ease-out infinite}.whatsapp-cta:after{animation-delay:1.05s}.whatsapp-cta:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 16px 42px rgba(0,0,0,.5),0 0 36px rgba(37,211,102,.35);animation-play-state:paused}.whatsapp-cta:focus-visible{outline:3px solid #fff;outline-offset:5px}.wa-icon{width:38px;height:38px;display:block;position:relative;z-index:2}.wa-label{position:absolute;right:78px;white-space:nowrap;background:#101817;color:#eef6f3;border:1px solid #31413e;padding:8px 11px;border-radius:7px;font-size:.78rem;font-weight:700;opacity:0;transform:translateX(7px);pointer-events:none;transition:.2s}.whatsapp-cta:hover .wa-label,.whatsapp-cta:focus-visible .wa-label{opacity:1;transform:none}@keyframes wa-wave{0%{transform:scale(1);opacity:.7}85%,100%{transform:scale(1.75);opacity:0}}@keyframes wa-blink{0%,100%{filter:brightness(1)}50%{filter:brightness(1.18)}}
     .reveal{opacity:0;transform:translateY(20px);transition:.65s ease}.reveal.show{opacity:1;transform:none}
-    @media(max-width:900px){.navlinks a:not(.btn){display:none}.herogrid,.sectiontop,.roadmap,.pilot{grid-template-columns:1fr}.hero{padding-top:58px}.console{transform:none}.cards{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step{border-bottom:1px solid var(--line)}.step:after{display:none}.roadcopy{position:static}.pilot{padding:38px}.pilot:after{font-size:7rem}.proof{flex-wrap:wrap}}
+    @media(max-width:900px){.navlinks a:not(.btn){display:none}.herogrid,.sectiontop,.roadmap,.pilot{grid-template-columns:1fr}.hero{padding-top:58px}.console{transform:none}.cards{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step{border-bottom:1px solid var(--line)}.step:after{display:none}.roadcopy{position:static}.pilot{padding:38px}.pilot:after{font-size:7rem}.proof{flex-wrap:wrap}.faq-list{grid-template-columns:1fr}.faq-item:first-child{grid-column:auto}}
     @media(max-width:580px){.wrap{width:min(100% - 24px,var(--max))}nav{height:66px}.navlinks .btn{padding:9px 12px;font-size:.78rem}.hero{padding:45px 0 55px}h1{font-size:3.15rem}.proof{gap:20px}.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.risk{grid-template-columns:5px 1fr}.risk .eta{grid-column:2;text-align:left}.sectiontop{gap:16px}.flow{grid-template-columns:1fr}.step{border-right:0}.pilot{padding:30px 24px}.foot{align-items:flex-start;gap:22px;flex-direction:column}.whatsapp-cta{right:16px;bottom:16px;width:58px;height:58px}.whatsapp-cta .wa-label{display:none}.wa-icon{width:33px;height:33px}}
     @media(max-width:580px){.network-shell{padding:10px}.network-svg{min-height:330px}.network-label{font-size:.58rem}.network-legend{gap:12px;font-size:9px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}.net-line.live,.agent-ring,.risk-flag,.whatsapp-cta,.whatsapp-cta:before,.whatsapp-cta:after{animation:none}.signal-dot{display:none}}
@@ -34,7 +60,7 @@
 <body>
   <nav class="wrap">
     <a class="brand" href="#top"><span class="mark"><i></i></span>Codencode <span style="color:#788481;font-weight:500">/ AI Tracking Agent</span></a>
-    <div class="navlinks"><a href="#how">How it works</a><a href="#roadmap">A2A roadmap</a><a class="btn primary" href="mailto:hello@codencode.my?subject=Codencode%20Tracking%20Agent%20Pilot">Discuss a pilot ↗</a></div>
+    <div class="navlinks"><a href="#how">How it works</a><a href="#roadmap">A2A roadmap</a><a href="/dashboard.html">Dashboard demo</a><a class="btn primary" href="mailto:hello@codencode.my?subject=Codencode%20Tracking%20Agent%20Pilot">Discuss a pilot ↗</a></div>
   </nav>
 
   <main id="top">
@@ -43,7 +69,7 @@
         <span class="tag mono">Live pilot · Manufacturing intelligence</span>
         <h1>See risk <span>before</span> it becomes delay.</h1>
         <p class="lead">An AI early-warning layer that connects to your ERP, PTS or Excel—flagging shortages, late deliveries and ownership gaps without replacing the systems you already use.</p>
-        <div class="actions"><a class="btn primary" href="mailto:hello@codencode.my?subject=Request%20a%20pilot%20assessment">Request a pilot assessment ↗</a><a class="btn ghost" href="#how">See how it works ↓</a></div>
+        <div class="actions"><a class="btn primary" href="/dashboard.html">Open dashboard prototype ↗</a><a class="btn ghost" href="#how">See how it works ↓</a></div>
         <div class="proof"><div><b>Fast to deploy</b>No ERP overhaul</div><div><b>Actionable alerts</b>Risk, impact, owner</div><div><b>Human governed</b>Auditable decisions</div></div>
       </div>
       <div class="console" aria-label="Example risk command centre">
@@ -108,6 +134,17 @@
         <article class="phase"><small>Phase 02</small><h3>Recommended resolution</h3><p>Suggest supplier follow-ups, allocation changes and recovery actions for human approval.</p></article>
         <article class="phase"><small>Phase 03</small><h3>Internal agent coordination</h3><p>Allow purchasing, production and project agents to exchange authorised status and actions.</p></article>
         <article class="phase"><small>Phase 04</small><h3>Cross-company interoperability</h3><p>Connect approved agents across customers, vendors and systems with full permissions and audit trails.</p></article>
+      </div>
+    </div></section>
+
+    <section id="faq"><div class="wrap">
+      <div class="sectiontop reveal"><div><span class="eyebrow">Frequently asked questions</span><h2>AI risk tracking,<br>explained clearly.</h2></div><p>Direct answers for operations, purchasing and project leaders evaluating an early-warning layer for their existing systems.</p></div>
+      <div class="faq-list">
+        <article class="faq-item reveal"><h3>What is Codencode AI Tracking Agent?</h3><p>Codencode is a lightweight AI risk intelligence layer that connects to your ERP, project tracking system or Excel workflows. It flags shortages, late deliveries and ownership gaps before they become production or project delays.</p></article>
+        <article class="faq-item reveal"><h3>Does Codencode replace our ERP?</h3><p>No. It works above the systems you already use, so teams can gain earlier visibility without a costly ERP replacement or multi-year implementation.</p></article>
+        <article class="faq-item reveal"><h3>Which risks can it detect?</h3><p>Projected material shortages, supplier dates that miss milestones, unconfirmed commitments, overdue actions and items with no accountable owner.</p></article>
+        <article class="faq-item reveal"><h3>Who is it designed for?</h3><p>Codencode initially serves manufacturers, followed by interior design and small-to-mid construction firms with fragmented purchasing, inventory and project data.</p></article>
+        <article class="faq-item reveal"><h3>What does A2A mean?</h3><p>Agent-to-Agent interoperability allows authorised agents across companies, suppliers and systems to exchange risk status and coordinate approved actions with human oversight and audit trails.</p></article>
       </div>
     </div></section>
 
